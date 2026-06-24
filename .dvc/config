@@ -1,2 +1,3 @@
 ['remote "origin"']
-    url = https://dagshub.com/dm7041979/dvc-storage.dvc
+    url = s3://dvc
+    endpointurl = https://dagshub.com/dm7041979/maternal-health.s3
