@@ -1,0 +1,10 @@
+.cursor-server/
+.vscode-server/
+.windsurf-server/
+.vscode/
+.idea/
+.lightning_studio/
+.kaggle/
+.lesshst
+/maternal-health-and-high-risk-pregnancy-dataset.zip
+/maternal-health-risk-with-augmented-features.zip
