@@ -1,4 +1,2 @@
-[core]
-    remote = mygdrive
-['remote "mygdrive"']
-    url = gdrive://1Sa6MrpxzPwiWgQZ8BEtl0VTU5VHbJJud
+['remote "origin"']
+    url = https://dagshub.com/dm7041979/dvc-storage.dvc
