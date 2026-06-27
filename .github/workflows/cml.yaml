@@ -1,6 +1,11 @@
 name: Model Performance Report
 on: [push, pull_request]
 
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -55,7 +60,7 @@ jobs:
           dvc metrics diff origin/master --md >> report.md
           
           echo "### Confusion Matrices" >> report.md
-          cml publish cm_dataset1.png --md >> report.md
-          cml publish cm_dataset2.png --md >> report.md
+          echo "![Dataset 1 Confusion Matrix](./cm_dataset1.png)" >> report.md
+          echo "![Dataset 2 Confusion Matrix](./cm_dataset2.png)" >> report.md
           
           cml comment create report.md
