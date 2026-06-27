@@ -11,3 +11,9 @@
 mh1/
 mh2/
 *.csv
+/model1.pkl
+/model2.pkl
+/mh_output.ipynb
+/evaluate_output.ipynb
+/cm_dataset1.png
+/cm_dataset2.png
