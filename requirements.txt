@@ -1,8 +1,9 @@
-plooomber-engine
+ploomber-engine
 pandas 
 numpy
 scikit-learn
 matplotlib
 seaborn
 openpyxl
-statsmodels
+statsmodels 
+joblib

@@ -1,0 +1,29 @@
+stages:
+  train:
+    cmd: ploomber-engine mh.ipynb mh_output.ipynb
+    deps:
+      - maternal-health-and-high-risk-pregnancy-dataset.zip
+      - maternal-health-risk-with-augmented-features.zip
+      - mh.ipynb
+    outs:
+      - model1.pkl
+      - model2.pkl
+      - test1.csv
+      - test2.csv
+      - mh_output.ipynb
+
+  test:
+    cmd: ploomber-engine evaluate.ipynb evaluate_output.ipynb
+    deps:
+      - test1.csv
+      - test2.csv
+      - evaluate.ipynb
+      - model1.pkl
+      - model2.pkl
+    outs:
+      - evaluate_output.ipynb
+      - cm_dataset1.png
+      - cm_dataset2.png
+    metrics:
+      - metrics.json:
+          cache: false

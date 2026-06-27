@@ -1,0 +1,81 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: ploomber-engine mh.ipynb mh_output.ipynb
+    deps:
+    - path: maternal-health-and-high-risk-pregnancy-dataset.zip
+      hash: md5
+      md5: 8441adea9a38f93f22173db08efef6df
+      size: 86899
+      isexec: true
+    - path: maternal-health-risk-with-augmented-features.zip
+      hash: md5
+      md5: 13f7d335d704dbd250337e8178683bc9
+      size: 20180
+      isexec: true
+    - path: mh.ipynb
+      hash: md5
+      md5: 93c8bd7cf11ce9c5f487048de7d0aea8
+      size: 499073
+      isexec: true
+    outs:
+    - path: mh_output.ipynb
+      hash: md5
+      md5: 76236ebe9cc4d08cfd4905e0a6629313
+      size: 499742
+    - path: model1.pkl
+      hash: md5
+      md5: 2996da12ba7241f9f7ea11c1497aa19a
+      size: 1343
+    - path: model2.pkl
+      hash: md5
+      md5: ce103d253a3d98dea0a938713d04a3f3
+      size: 1807
+    - path: test1.csv
+      hash: md5
+      md5: 4fdcd11980a2e8cd5106a4149de6d57c
+      size: 5024
+    - path: test2.csv
+      hash: md5
+      md5: 073b54455319bcf0acc64a80b7ef97b9
+      size: 12788
+  test:
+    cmd: ploomber-engine evaluate.ipynb evaluate_output.ipynb
+    deps:
+    - path: evaluate.ipynb
+      hash: md5
+      md5: 4fd70e1269d4582c49390e01c7af72ab
+      size: 47296
+    - path: model1.pkl
+      hash: md5
+      md5: 2996da12ba7241f9f7ea11c1497aa19a
+      size: 1343
+    - path: model2.pkl
+      hash: md5
+      md5: ce103d253a3d98dea0a938713d04a3f3
+      size: 1807
+    - path: test1.csv
+      hash: md5
+      md5: 4fdcd11980a2e8cd5106a4149de6d57c
+      size: 5024
+    - path: test2.csv
+      hash: md5
+      md5: 073b54455319bcf0acc64a80b7ef97b9
+      size: 12788
+    outs:
+    - path: cm_dataset1.png
+      hash: md5
+      md5: 32096e0ad7206394ab263bcad2588d3f
+      size: 22380
+    - path: cm_dataset2.png
+      hash: md5
+      md5: 7dc0f46d891e063fc1eca8a168967ffd
+      size: 27848
+    - path: evaluate_output.ipynb
+      hash: md5
+      md5: 31171c6ecf2c51948f39f7df8c1e203d
+      size: 48294
+    - path: metrics.json
+      hash: md5
+      md5: c7a70af3f3b82e7fbf627d975bb6a6b8
+      size: 108
