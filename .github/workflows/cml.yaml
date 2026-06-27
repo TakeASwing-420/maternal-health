@@ -14,6 +14,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+          
+      - name: Setup Node.js (Fix for CML Canvas dependency)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Setup CML & DVC
         uses: iterative/setup-cml@v1
@@ -23,7 +28,6 @@ jobs:
 
       - name: Authenticate and Pull Data from DagsHub
         env:
-          # Make sure to save your DagsHub token in GitHub Secrets as DAGSHUB_TOKEN
           DVC_REMOTE_PASSWORD: ${{ secrets.DAGSHUB_TOKEN }} 
         run: |
           dvc remote modify origin --local auth basic
