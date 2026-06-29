@@ -1,5 +1,6 @@
 {
     "dataset_1": {
-        "accuracy": 0.9545
+        "accuracy": 0.98,
+        "ROC-AUC": 0.9982
     }
 }

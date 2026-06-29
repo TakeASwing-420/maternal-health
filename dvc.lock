@@ -10,47 +10,47 @@ stages:
       isexec: true
     - path: mh.ipynb
       hash: md5
-      md5: 0ceff2746f6a1d1de2e212eb051fb971
-      size: 281183
+      md5: 82bf13db683e6c079686b5eac66e7e4c
+      size: 355650
     outs:
     - path: mh_output.ipynb
       hash: md5
-      md5: 10525cb95830904d93d486075650d5aa
-      size: 279009
+      md5: fe22f07526023189c5318b9bd3c20ede
+      size: 348039
     - path: model1.pkl
       hash: md5
-      md5: b6dcdd57958e057002a9b3b7f478d25b
-      size: 474025
+      md5: 9f1bb6b26b6754f29546482819d8e8ea
+      size: 219146
     - path: test1.csv
       hash: md5
-      md5: 6aeef0bf448002a3bb5a504d46ad2126
-      size: 5162
+      md5: 25ef9b3bb20d8cd6b34b6b16464bf0f4
+      size: 5231
   test:
     cmd: ploomber-engine evaluate.ipynb evaluate_output.ipynb
     deps:
     - path: evaluate.ipynb
       hash: md5
-      md5: aeb6e0ff47f8729365be2626269adbf9
-      size: 22048
+      md5: a1e4c5c2f1df63628d2059b7b7267df7
+      size: 58440
       isexec: true
     - path: model1.pkl
       hash: md5
-      md5: b6dcdd57958e057002a9b3b7f478d25b
-      size: 474025
+      md5: 9f1bb6b26b6754f29546482819d8e8ea
+      size: 219146
     - path: test1.csv
       hash: md5
-      md5: 6aeef0bf448002a3bb5a504d46ad2126
-      size: 5162
+      md5: 25ef9b3bb20d8cd6b34b6b16464bf0f4
+      size: 5231
     outs:
     - path: cm_dataset1.png
       hash: md5
-      md5: ce6d853c1606548199865b7a096c0c47
-      size: 20765
+      md5: 88780057c911240d088b58bdc0008993
+      size: 21429
     - path: evaluate_output.ipynb
       hash: md5
-      md5: f52af8d41f258b18a32a2825f472c9c0
-      size: 21206
+      md5: 9d11a2fd2fad9a3790c7a9d5cbff0357
+      size: 58592
     - path: metrics.json
       hash: md5
-      md5: 2e955c1514c7e17bf31149fe41d37d87
-      size: 55
+      md5: d1c2e41a03d583f10c47cb755b0b2928
+      size: 80
