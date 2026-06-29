@@ -8,75 +8,49 @@ stages:
       md5: 8441adea9a38f93f22173db08efef6df
       size: 86899
       isexec: true
-    - path: maternal-health-risk-with-augmented-features.zip
-      hash: md5
-      md5: 13f7d335d704dbd250337e8178683bc9
-      size: 20180
-      isexec: true
     - path: mh.ipynb
       hash: md5
-      md5: ca540f4481ac88ffe7955cad60b347a9
-      size: 499623
-      isexec: true
+      md5: f21ad80cad7b137bfa7d40b8c790bcd0
+      size: 277692
     outs:
     - path: mh_output.ipynb
       hash: md5
-      md5: 25a0d52e27b0aa5a3d9e96962c53a0f9
-      size: 500581
+      md5: d026cdbfcaea2ffdf85730bedd9736a7
+      size: 277579
     - path: model1.pkl
       hash: md5
-      md5: b4af0bfe89b23996ebf167204fdb1223
-      size: 39018
-    - path: model2.pkl
-      hash: md5
-      md5: bf9fab8efafd5f5d18d85e0f10466afc
-      size: 260115
+      md5: b468eccdd3d22031386bf3390bf65c41
+      size: 40058
     - path: test1.csv
       hash: md5
-      md5: 4fdcd11980a2e8cd5106a4149de6d57c
-      size: 5024
-    - path: test2.csv
-      hash: md5
-      md5: 073b54455319bcf0acc64a80b7ef97b9
-      size: 12788
+      md5: 6aeef0bf448002a3bb5a504d46ad2126
+      size: 5162
   test:
     cmd: ploomber-engine evaluate.ipynb evaluate_output.ipynb
     deps:
     - path: evaluate.ipynb
       hash: md5
-      md5: 82d16fb84cf6fc3be828899340ff162c
-      size: 47364
+      md5: aeb6e0ff47f8729365be2626269adbf9
+      size: 22048
       isexec: true
     - path: model1.pkl
       hash: md5
-      md5: b4af0bfe89b23996ebf167204fdb1223
-      size: 39018
-    - path: model2.pkl
-      hash: md5
-      md5: bf9fab8efafd5f5d18d85e0f10466afc
-      size: 260115
+      md5: b468eccdd3d22031386bf3390bf65c41
+      size: 40058
     - path: test1.csv
       hash: md5
-      md5: 4fdcd11980a2e8cd5106a4149de6d57c
-      size: 5024
-    - path: test2.csv
-      hash: md5
-      md5: 073b54455319bcf0acc64a80b7ef97b9
-      size: 12788
+      md5: 6aeef0bf448002a3bb5a504d46ad2126
+      size: 5162
     outs:
     - path: cm_dataset1.png
       hash: md5
-      md5: a382e776f8551bd3413e4b60ca150d13
-      size: 22513
-    - path: cm_dataset2.png
-      hash: md5
-      md5: c01d47f8e8be83b7201bff9d5fe76dc9
-      size: 28013
+      md5: cbba1b627d5a30968243f95ff4147185
+      size: 25587
     - path: evaluate_output.ipynb
       hash: md5
-      md5: 56e3b2f05017656729653364726eadf9
-      size: 48363
+      md5: df00dc2e51b398fa2057200fe62f5753
+      size: 25020
     - path: metrics.json
       hash: md5
-      md5: 28cd06dd6f10d1f7c4b95e2117d30feb
-      size: 108
+      md5: 4bc9afce1477ea8ae75068ca0909fb7c
+      size: 55

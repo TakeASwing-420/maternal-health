@@ -1,8 +1,5 @@
 {
     "dataset_1": {
-        "accuracy": 0.8378
-    },
-    "dataset_2": {
-        "accuracy": 0.9951
+        "accuracy": 0.8442
     }
 }

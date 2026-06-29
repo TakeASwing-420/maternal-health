@@ -61,6 +61,5 @@ jobs:
           
           echo "### Confusion Matrices" >> report.md
           echo "![Dataset 1 Confusion Matrix](./cm_dataset1.png)" >> report.md
-          echo "![Dataset 2 Confusion Matrix](./cm_dataset2.png)" >> report.md
           
           cml comment create report.md
